@@ -1,0 +1,167 @@
+:root {
+    --big-text: 50px;
+}
+
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+/* header has a fixed position so that it appears at the top no matter what */
+header {
+    width: 100%;
+    height: 100px;
+    height: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+/* all other sections aside from the header are moved down a bit so they don't get hidden by the header*/
+section, footer {
+    position: relative;
+    top: 100px;
+}
+
+/* the nav links will be spaced, and displayed horizontally */
+ul li {
+    display: inline-block;
+    margin: 20px;
+}
+
+/* size of the title */
+h1 {
+    font-size: 300%;
+    margin: 10px;
+}
+
+/* size of the section titles*/
+h2 {
+    font-size: 200%;
+    margin: 10px;
+}
+
+/* under each section will have a bottom solid line */
+.sections {
+    display: flex;
+    border-bottom: 5px solid black;
+
+}
+
+/* the sections on the left only contains titles, so they will occupy 200px */
+.section {
+    flex: 0 0 200px;
+    justify-content: flex-start;
+}
+
+/* the smaller projects get aligned in center, and display of flex */
+#subs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* 2 (small) projects can be seen on each row */
+.subs {
+    width: 50%;
+    padding: 40px;
+}
+
+/* size of candidate profile picture, and it floats left */
+#me {
+    height: 300px;
+    width: auto;
+    float: left;
+    margin-right: 30px;
+}
+
+/* images can occupy 100% of screen width max */
+.sections img {
+    width: 100%;
+}
+
+.project {
+    position: relative;
+}
+
+/* overlays will be project titles, in front of the images of the projects */
+.overlay {
+    display: flex;
+    width: 50%;
+    height: 30%;
+    padding: 5%;
+    justify-content: center;
+    position: relative;
+    margin-top: -15%;
+    margin-bottom: 5%;
+    background-color: beige;
+    font-size: 150%;
+}
+
+/* so that links are not underlined */
+a {
+    text-decoration: none;
+}
+
+/* things with class of select when click on them will auto-select the entire element for user */
+.select:active {
+    user-select: all;
+}
+
+/* for the opacity hover effect on the images that are not the about me profile */
+.hover-effect:hover {
+    opacity: 0.8;
+}
+
+footer {
+    text-align: right;
+}
+
+/* targetted for the hidden elemnents that help with navigation linking */
+.hidden {
+    position: absolute;
+    top: -105px;
+}
+
+/* targetted for the about me text */
+.big-text {
+    font-size: var(--big-text);
+    padding: 15px;
+}
+
+#contact aside ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* if screen gets smaller than 1035px, title gets smaller and navbar moves down so theres enough space for everything */
+@media screen and (max-width: 1035px) {
+    h1 {
+        font-size: 150%;
+    }
+    header {
+        flex-direction: column;
+    }
+}
+
+/* if screen gets smaller than this, the smaller projects will occupy each row like the big project */
+@media screen and (max-width: 800px) {
+    .subs {
+        width: 100%;
+    }
+    .sections {
+        display: block;
+    }
+    .section {
+        border-right: none;
+        border-bottom: 5px solid black;
+    }
+}
