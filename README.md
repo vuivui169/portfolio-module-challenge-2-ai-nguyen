@@ -32,3 +32,7 @@ Please refer to the LICENSE in the repo.
 ## Other notes
 
 submitted late by 12 days.
+
+## Feedback
+
+Very good job! The site has a good design and is mobile responsive. The navbar links are all working. The site includes your name and your picture. The section showcasing your passed projects has working links. The portfolio showcases all of the required sections for the assignment. * Clicking on a featured application doesn't open that deployed application (at least one application, in case they are using placeholders). The Readme is very descriptive with a link to live application. Keep up the good work. [95/100]
